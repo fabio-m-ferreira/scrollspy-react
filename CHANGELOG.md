@@ -1,5 +1,11 @@
 # scrollspy
 
+## 0.0.2
+
+### Patch Changes
+
+- fba41c0: Updated package to be published as a npm public package
+
 ## 1.0.0
 
 ### Major Changes
