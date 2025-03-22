@@ -1,5 +1,5 @@
 {
-  "name": "scrollspy",
+  "name": "scrollspy-react",
   "license": "MIT",
   "version": "0.0.3",
   "type": "module",
@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsup index.tsx --format cjs,esm --dts",
     "lint": "tsc",
-    "release": "changeset",
+    "release": "changeset && changeset version",
     "ci:publish": "pnpm build && changeset publish --access public"
   },
   "devDependencies": {
