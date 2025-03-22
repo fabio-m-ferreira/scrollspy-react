@@ -2,12 +2,15 @@
   "name": "scrollspy",
   "license": "MIT",
   "version": "0.0.1",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.tsx --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "release": "changeset",
+    "ci:publish": "pnpm build && changeset publish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",
@@ -21,5 +24,16 @@
   "peerDependencies": {
     "react": ">=16.8.0 <20.0.0",
     "react-dom": ">=16.8.0 <20.0.0"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   }
 }
