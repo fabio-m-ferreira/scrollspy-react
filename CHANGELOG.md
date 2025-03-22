@@ -1,5 +1,11 @@
 # scrollspy
 
+## 0.0.3
+
+### Patch Changes
+
+- Added permissions to Github Actions
+
 ## 0.0.2
 
 ### Patch Changes
