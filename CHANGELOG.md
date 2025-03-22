@@ -1,5 +1,11 @@
 # scrollspy
 
+## 0.0.4
+
+### Patch Changes
+
+- Changed package name and automated changeset versioning
+
 ## 0.0.3
 
 ### Patch Changes
