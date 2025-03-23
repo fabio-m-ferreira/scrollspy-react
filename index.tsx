@@ -7,7 +7,7 @@ import React, {
   ElementType,
 } from "react";
 
-type ScrollspyProps = {
+interface ScrollspyProps extends React.HTMLAttributes<HTMLElement> {
   items: string[];
   currentClassName: string;
   scrolledPastClassName?: string;
@@ -17,7 +17,7 @@ type ScrollspyProps = {
   rootEl?: string;
   onUpdate?: (item?: HTMLElement) => void;
   children: ReactNode;
-};
+}
 
 const throttle = (fn: () => void, threshold = 100) => {
   let last: number | undefined;
@@ -50,6 +50,7 @@ const Scrollspy: React.FC<ScrollspyProps> = ({
   rootEl,
   onUpdate = () => {},
   children,
+  ...rest
 }) => {
   const [targetItems, setTargetItems] = useState<HTMLElement[]>([]);
   const [inViewState, setInViewState] = useState<boolean[]>([]);
@@ -146,7 +147,7 @@ const Scrollspy: React.FC<ScrollspyProps> = ({
   }, [items, rootEl]);
 
   return (
-    <ComponentTag style={style}>
+    <ComponentTag style={style} {...rest}>
       {React.Children.map(children, (child, idx) => {
         if (React.isValidElement<{ className?: string }>(child)) {
           const childClassName = [
