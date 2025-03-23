@@ -1,5 +1,11 @@
 # scrollspy
 
+## 0.0.5
+
+### Patch Changes
+
+- Added ...rest to get HTML atributes for the component
+
 ## 0.0.4
 
 ### Patch Changes
