@@ -1,5 +1,11 @@
 # scrollspy
 
+## 1.0.0
+
+### Major Changes
+
+- Official release 1.0.0
+
 ## 0.0.5
 
 ### Patch Changes
