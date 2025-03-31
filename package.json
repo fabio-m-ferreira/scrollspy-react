@@ -3,11 +3,11 @@
   "license": "MIT",
   "version": "0.0.5",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup index.tsx --format cjs,esm --dts",
+    "build": "tsup",
     "lint": "tsc",
     "release": "changeset && changeset version",
     "ci:publish": "pnpm build && changeset publish --access public"
@@ -16,14 +16,14 @@
     "@changesets/cli": "^2.27.10",
     "@types/node": "^22.9.4",
     "@types/react": "^18.3.12",
-    "react": "^19.0.0-rc.0",
-    "react-dom": "^19.0.0-rc.0",
-    "tsup": "^8.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.4.0",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "react": ">=16.8.0 <20.0.0",
-    "react-dom": ">=16.8.0 <20.0.0"
+    "react": ">=19.0.0 <20.0.0",
+    "react-dom": ">=19.0.0 <20.0.0"
   },
   "publishConfig": {
     "provenance": true,
@@ -32,12 +32,24 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/fabio-m-ferreira/scrollspy-react.git"
-  }
+  },
+  "author": "fabiof",
+  "description": "React Scrollspy Component",
+  "keywords": [
+    "react",
+    "scrollspy",
+    "navigation",
+    "typescript",
+    "scroll",
+    "scrollspy-component",
+    "scrollspy-react"
+  ],
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }
